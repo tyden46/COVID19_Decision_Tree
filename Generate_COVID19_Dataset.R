@@ -1,6 +1,7 @@
 library(stringr)
-setwd("C://Users//tyden46//Documents")
-coronaVirusTable=read.csv("https://raw.githubusercontent.com/beoutbreakprepared/nCoV2019/master/latest_data/latestdata.csv")
+#Download data at https://github.com/beoutbreakprepared/nCoV2019/blob/master/latest_data/latestdata.tar.gz
+#Extract data and save as "latestdata.csv"
+coronaVirusTable=read.csv("latestdata.csv")
 outcomeAvailable=coronaVirusTable[which(coronaVirusTable$outcome!=""),]
 goodData=outcomeAvailable[which(outcomeAvailable$sex!=""),]
 goodData=goodData[which(goodData$age!=""),]
